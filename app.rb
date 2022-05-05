@@ -1,0 +1,6 @@
+require('sinatra')
+require('sinatra/reloader')
+require('./lib/word')
+require('./lib/define')
+require('pry')
+also_reload('lib/**/*.rb')
