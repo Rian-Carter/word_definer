@@ -90,7 +90,7 @@ describe ('Definition') do
     it("finds definition of a word") do
       word2 = Word.new("Yellow", nil)
       word2.save()
-      definition = Definition("Peacock", @word.id, nil)
+      definition = Definition.new("Peacock", @word.id, nil)
       definition.save()
       definition2 = Definition.new("Eagle", word2.id, nil)
       definition2.save()
@@ -102,7 +102,7 @@ describe ('Definition') do
     it("finds the word the definition belongs to") do
       definition = Definition.new("Peacock", @word.id, nil)
       definition.save()
-      expect(definition.word()).to(eeq(@word))
+      expect(definition.word()).to(eq(@word))
     end
   end
 end
