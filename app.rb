@@ -1,7 +1,7 @@
 require('sinatra')
 require('sinatra/reloader')
 require('./lib/word')
-require('./lib/define')
+require('./lib/definition')
 require('pry')
 also_reload('lib/**/*.rb')
 
@@ -49,14 +49,4 @@ delete('/words/:id') do
   @word.delete()
   @words = Word.all
   erb(:words)
-end
-
-get('/results') do
-  erb(:search)
-end
-
-post('/results') do
-  name = params[:search]
-  @words = Word.search(name)
-  erb(:search_results)
 end

@@ -72,4 +72,16 @@ describe ('Word') do
     end
   end
 
+  # describe('.search') do
+  #   it("returns a words definitions") do
+  #     word = Word.new("Iin Rainbows", nil)
+  #     word.save()
+  #     definition = Definition.new("Yellow", word.id, nil)
+  #     definition.save()
+  #     definition2 = Definition.new("Bellow The Water", word.id, nil)
+  #     definition2.save()
+  #     expect(word.definition).to(eq([definition, definition2]))
+  #   end
+  # end
+
 end

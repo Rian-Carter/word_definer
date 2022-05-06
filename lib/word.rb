@@ -40,7 +40,7 @@ class Word
 
   def self.search(str)
     search_results = []
-    temp = @@words.find_all { |word| word[1].name.downcase == temp.downcase}
+    temp = @@words.find_all { |word| word[1].name.downcase == str.downcase}
     search_results.push(temp[1])
   end
 

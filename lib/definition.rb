@@ -6,7 +6,7 @@ class Definition
   @@total_rows = 0
 
   def initialize(name, word_id, id)
-    @word = word
+    @name = name
     @word_id = word_id
     @id = id || @@total_rows +=1
   end
@@ -34,7 +34,7 @@ class Definition
   end
 
   def delete
-    @@definitions(self.id)
+    @@definitions.delete(self.id)
   end
 
   def self.clear
@@ -48,6 +48,8 @@ class Definition
         definitions.push(song)
       end
     end
+    definitions
+  end
 
   def word
     Word.find(self_id)
