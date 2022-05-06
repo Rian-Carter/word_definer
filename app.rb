@@ -16,5 +16,11 @@ get('/words') do
 end
 
 get('/words/new') do
-  erb(:new_album)
+  erb(:new_word)
+end
+
+post('/words') do
+  name = params[:word_name]
+  word = Word.new(name, nil)
+  word.save()
 end
