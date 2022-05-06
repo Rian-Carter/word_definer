@@ -23,4 +23,6 @@ post('/words') do
   name = params[:word_name]
   word = Word.new(name, nil)
   word.save()
+  @words = Word.all()
+  erb(:words)
 end
