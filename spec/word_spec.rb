@@ -1,6 +1,6 @@
 require('rspec')
 require('word')
-require('define')
+# require('define')
 
 describe ('Word') do
   describe('.all') do
@@ -18,5 +18,15 @@ describe ('Word') do
       expect(Word.all).to(eq([word, word2]))
     end
   end
-  
+
+  describe ('#==') do
+    it("is the same word if it hase the same attributes of another word") do
+      word = Word.new("Rainbow", nil)
+      word2 = Word.new("Rainbow", nil)
+      expect(word).to(eq(word2))
+    end
+  end
+
+
+
 end
