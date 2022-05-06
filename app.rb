@@ -51,4 +51,3 @@ delete('/words/:id') do
   erb(:words)
 end
 
-WIP
