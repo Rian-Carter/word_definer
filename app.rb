@@ -51,3 +51,9 @@ delete('/words/:id') do
   erb(:words)
 end
 
+get('/results') do
+  name = params[:search]
+  @words = Word.search(name)
+  erb(:search)
+end
+
