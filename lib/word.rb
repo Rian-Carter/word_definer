@@ -38,4 +38,10 @@ class Word
     @@words.delete(self.id)
   end
 
+  def self.search(str)
+    search_results = []
+    temp = @@words.find_all { |word| word[1].name.downcase == temp.downcase}
+    search_results.push(temp[1])
+  end
+
 end
