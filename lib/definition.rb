@@ -42,7 +42,7 @@ class Definition
   end
 
   def self.find_by_word(wrd_id)
-    definitions = {}
+    definitions = []
     @@definitions.values.each do |defintion|
       if definition.word_id == wrd_id
         definitions.push(song)
