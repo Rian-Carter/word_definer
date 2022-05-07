@@ -7,6 +7,18 @@ describe ('Word') do
     Word.clear()
   end
 
+  describe('#definitions') do
+    it("returns a word's definition") do
+      word = Word.new("In Rainbows", nil)
+      word.save()
+      definition = Definition.new("Peacock", nil)
+      definition.save()
+      definition2 = Definition.new("Bodysnatchers", nil)
+      definition2.save()
+      expect(word.definitions).to(eq([definition, definition2]))
+    end
+  end
+
   describe('.all') do
     it("returns an empty array when there are no albums") do
       expect(Word.all).to(eq([]))
