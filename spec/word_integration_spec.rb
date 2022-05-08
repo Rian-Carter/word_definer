@@ -68,6 +68,6 @@ describe("deletes a definition", { :type => :feature }) do
     definition.save()
     visit("/words/#{word.id}/definitions/#{definition.id}")
     click_on("Delete")
-    expect(page).to(have_content(""))
+    expect(page).to have_content("")
   end
 end
